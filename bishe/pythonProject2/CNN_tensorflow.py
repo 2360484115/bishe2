@@ -98,6 +98,7 @@ model = Sequential([
     Input(shape=(train_x.shape[1], train_x.shape[2])),  # 输入形状
     Conv1D(filters=64, kernel_size=3, activation='relu'),
     MaxPooling1D(pool_size=2),
+        # …重复多层增加深度，并提高卷积核个数
     Dropout(0.5),
     Flatten(),
     Dense(100, activation='relu'),
